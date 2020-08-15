@@ -1,1 +1,49 @@
-
+<!DOCTYPE html>
+<head>
+    <title>
+            H2 Computing Sign up Form
+    </title>
+</head>
+<form action="exercise_02_response.html">
+    <h1>H2 Computing Sign up Form</h1>
+    <p>Please enter your particulars below.</p>
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td><textarea name="firstname" placeholder="First Name"></textarea></td>
+            <td>Last Name:</td>
+            <td><textarea name="lastname" placeholder="Last Name:"></textarea></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><textarea name="email" placeholder="name@email.com"></textarea></td>
+            <td>Contact:</td>
+            <td><textarea name="contact"></textarea></td>
+        </tr>
+        <tr>
+            <td>Class:</td>
+            <td><textarea name="class"></textarea></td>
+            <td>Gender</td>
+            <td><select id="gender" name="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option></select></td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td><textarea name="dob">01/01/2000</textarea></td>
+        </tr>
+    </table>
+    <p> Subject Combination</p>
+    <table>
+        <tr>
+            <td><input type="radio" id="pcpme" name="subjcombi" value="pcpme">P CP M E</radio></td>
+        </tr>
+        <tr>
+            <td><input type="radio" id="ccpme" name="subjcombi" value="ccpme">C CP M E</radio></td>
+        </tr>
+        <tr>
+            <td><input type="radio" id="other" name="subjcombi" value="other">Other: <textarea name="other"></textarea></radio></td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>

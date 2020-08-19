@@ -1,1 +1,13 @@
-
+body{background: black;}
+h1{background: rgb(253, 67, 68);
+color: rgb(239, 226, 186);
+text-align: center;
+border: 4px solid rgb(239, 226, 186);
+font-family: 'Courier New', Courier, monospace}
+h2{color: rgb(239, 226, 186);
+    font-family: 'Courier New', Courier, monospace}
+p{color: rgb(53, 197, 180);
+    font-family: 'Courier New', Courier, monospace}
+#pythonlink{color: rgb(239, 226, 186);
+    font-family: 'Courier New', Courier, monospace;
+size: 200px}

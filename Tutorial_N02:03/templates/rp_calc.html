@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/static/css/rp_calc.css">
+    <title>
+        My Website
+    </title>
+</head>
+<body>
+    <table id="menu">
+        <td class="cell"><a href="/">Home</a></td>
+        <td class="cell"><a href="/about/">About</a></td>
+        <td class="cell"><a href="/rp_calc/">RP Calculator</a></td>
+    </table>
+<h1>Rank Point Calculator</h1>
+<p>Do you wish to include result of PW?</p>
+<form action="/rp_calc/" method="POST">
+    <p>
+        <select id="include_pw" name="include_pw">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+        </select>
+    </p>
+    <p>Do you wish to include result of Mother Tongue Language?</p>
+    <p>
+        <select id="include_mtl" name="include_mtl">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Update">
+    </p>
+</form>

@@ -15,7 +15,17 @@ def rp_calc():
     if request.method == "GET":
         return render_template("rp_calc.html")
     else:
-        return render_template("rp_calc_select.html")
+        include_pw, include_mtl = request.form["include_pw"], request.form["include_mtl"]
+        if include_pw == "yes":
+            if include_mtl == "yes":
+                return render_template("rp_calc_pw_mtl.html")
+            else:
+                return render_template("rp_calc_pw.html")
+        else:
+            if include_mtl == "yes":
+                return render_template("rp_calc_mtl.html")
+            else:
+                return render_template("rp_calc_select.html")
 
 if __name__ == "__main__":
-    app.run(port=5008, debug=True)
+    app.run(debug=True)

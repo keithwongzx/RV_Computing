@@ -3,5 +3,6 @@ h1{text-align: center;}
 .cell{text-align: center;
     width: 480px;
     border: 1px solid black}
+table{width: 100%}
 #include_pw{width: 1424px;}
 #include_mtl{width: 1424px}

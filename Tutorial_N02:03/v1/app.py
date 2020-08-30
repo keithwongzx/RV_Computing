@@ -12,6 +12,8 @@ def about():
 
 @app.route("/rp_calc/", methods=["GET", "POST"])
 def rp_calc():
+    post = 0
+    print(post)
     if request.method == "GET":
         return render_template("rp_calc.html")
     else:

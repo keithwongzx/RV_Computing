@@ -3,26 +3,38 @@
 {% block content %}
 <h1>Here is your Rank Point!</h1>
 <table>
-    <th>
-        <td>
-            Subject
-        </td>
-        <td>
-            Grade
-        </td>
-        <td>
-            RP
-        </td>
+    <th align="left">
+        Subject Name
+    </th>
+    <th align="left">
+        Grade
+    </th>
+    <th align="right">
+        RP
     </th>
     {% for result in data %}
     <tr>
         <td>
-            result[0]
+            {{result[0]}}
         </td>
-        <td>
-            result[1]
+        <td class="grade">
+            {{result[1]}}
+        </td>
+        <td class="rp">
+            {{result[2]}}
         </td>
     </tr>
     {% endfor %}
+    <tr>
+        <td>
+            Total
+        </td>
+        <td>
+
+        </td>
+        <td align="right">
+            {{total_rp}}
+        </td>
+    </tr>
 </table>
 {% endblock %}

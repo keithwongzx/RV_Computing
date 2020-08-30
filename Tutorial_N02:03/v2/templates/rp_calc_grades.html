@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Rank Point Calculator</h1>
-<form action="/rp_display/" method="POST">
+<form action="{{url_for('display')}}" method="POST">
     <table>
         <tr>
             <td class="subj">
@@ -92,7 +92,7 @@
                 </select>
             </td>
         </tr>
-        {% if include_pw >= 0 %}
+        {% if include_pw == "yes" %}
         <tr>
             <td>
                 Project Work
@@ -110,7 +110,7 @@
             </td>
         </tr>
         {% endif %}
-        {% if include_mtl >= 0 %}
+        {% if include_mtl == "yes" %}
         <tr>
             <td>
                 Mother Tongue

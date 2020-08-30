@@ -21,7 +21,31 @@ def rp_calc():
 
 @app.route("/rp_display/", methods=["POST"])
 def display():
-    pass
+    sub_list = []
+    for i in request.form:
+        sub_list.append(i)
+    if "pw" in sub_list:
+        include_pw = "yes"
+    if "mt" in sub_list:
+        include_mtl = "yes"
+    if "pw" in sub_list:
+        if "mt" in sub_list:
+            h2_1, h2_2, h2_3, h1, gp, pw, mt = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
+                request.form["gp"], request.form["pw"], request.form["mt"]
+            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp, pw=pw, mt=mt)
+        else:
+            h2_1, h2_2, h2_3, h1, gp, pw = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
+                request.form["gp"], request.form["pw"]
+            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp, pw=pw)
+    else:
+        if "mt" in sub_list:
+            h2_1, h2_2, h2_3, h1, gp, mt = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
+                request.form["gp"], request.form["mt"]
+            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp, mt=mt)
+        else:
+            h2_1, h2_2, h2_3, h1, gp = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
+                request.form["gp"]
+            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=5002, debug=True)

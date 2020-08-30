@@ -27,5 +27,9 @@ def rp_calc():
             else:
                 return render_template("rp_calc_select.html")
 
+@app.route("/rp_display/", methods=["POST"])
+def display():
+    pass
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -14,5 +14,15 @@
             RP
         </td>
     </th>
+    {% for result in data %}
+    <tr>
+        <td>
+            result[0]
+        </td>
+        <td>
+            result[1]
+        </td>
+    </tr>
+    {% endfor %}
 </table>
 {% endblock %}

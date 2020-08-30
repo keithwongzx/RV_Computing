@@ -24,28 +24,22 @@ def display():
     sub_list = []
     for i in request.form:
         sub_list.append(i)
+    data = request.form
+    print(data)
     if "pw" in sub_list:
         include_pw = "yes"
     if "mt" in sub_list:
         include_mtl = "yes"
     if "pw" in sub_list:
         if "mt" in sub_list:
-            h2_1, h2_2, h2_3, h1, gp, pw, mt = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
-                request.form["gp"], request.form["pw"], request.form["mt"]
-            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp, pw=pw, mt=mt)
+            return render_template("rp_display.html", include_pw=include_pw, include_mtl=include_mtl, data=data)
         else:
-            h2_1, h2_2, h2_3, h1, gp, pw = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
-                request.form["gp"], request.form["pw"]
-            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp, pw=pw)
+            return render_template("rp_display.html", include_pw=include_pw, include_mtl=include_mtl, data=data)
     else:
         if "mt" in sub_list:
-            h2_1, h2_2, h2_3, h1, gp, mt = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
-                request.form["gp"], request.form["mt"]
-            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp, mt=mt)
+            return render_template("rp_display.html", include_pw=include_pw, include_mtl=include_mtl, data=data)
         else:
-            h2_1, h2_2, h2_3, h1, gp = request.form["h2_1"], request.form["h2_2"], request.form["h2_3"], request.form["h1"], \
-                request.form["gp"]
-            return render_template("rp_display", include_pw=include_pw, include_mtl=include_mtl, h2_1=h2_1, h2_2=h2_2, h2_3=h2_3, h1=h1, gp=gp)
+            return render_template("rp_display.html", include_pw=include_pw, include_mtl=include_mtl, data=data)
 
 if __name__ == "__main__":
-    app.run(port=5002, debug=True)
+    app.run(port=5003, debug=True)

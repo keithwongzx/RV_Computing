@@ -4,3 +4,4 @@ table{width: 100%}
 .cell{text-align: center;
     width: 480px;
     border: 1px solid black}
+select{width: 100%}

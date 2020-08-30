@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <title>
+        My Website
+    </title>
+</head>
+<body>
+    <table id="menu">
+        <td class="cell"><a href="{{url_for('home')}}">Home</a></td>
+        <td class="cell"><a href="{{url_for('about')}}">About</a></td>
+        <td class="cell"><a href="{{url_for('rp_calc')}}">RP Calculator</a></td>
+    </table>
+    {% block content %}
+    {% endblock %}
+</body>

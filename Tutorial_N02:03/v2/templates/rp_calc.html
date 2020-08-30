@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Rank Point Calculator</h1>
+<p>Do you wish to include result of PW?</p>
+<form action="/rp_calc/" method="POST">
+    <p>
+        <select id="include_pw" name="include_pw">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+        </select>
+    </p>
+    <p>Do you wish to include result of Mother Tongue Language?</p>
+    <p>
+        <select id="include_mtl" name="include_mtl">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Update">
+    </p>
+</form>
+{% endblock %}

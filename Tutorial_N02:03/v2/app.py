@@ -15,7 +15,8 @@ def rp_calc():
     if request.method == "GET":
         return render_template("rp_calc.html")
     else:
-        pass
+        include_mtl, include_pw = request.form["include_mtl"], request.form["include_pw"]
+        return render_template("rp_calc_grades.html", include_mtl=include_mtl, include_pw=include_pw)
 
 
 @app.route("/rp_display/", methods=["POST"])
